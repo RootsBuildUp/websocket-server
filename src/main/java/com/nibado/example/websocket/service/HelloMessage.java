@@ -1,7 +1,10 @@
 package com.nibado.example.websocket.service;
 
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 
-
+@AllArgsConstructor
+@NoArgsConstructor
 public class HelloMessage {
     private String name;
 

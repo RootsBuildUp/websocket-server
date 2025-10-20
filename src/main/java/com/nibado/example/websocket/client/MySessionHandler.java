@@ -13,8 +13,8 @@ import java.lang.reflect.Type;
 public class MySessionHandler extends StompSessionHandlerAdapter {
     @Override
     public void afterConnected(StompSession session, StompHeaders connectedHeaders) {
-        session.subscribe("/topic/greetings", this);
-        session.send("/app/hello", "{\"name\":\"Client\"}".getBytes());
+        session.subscribe("/topic/notify-send", this);
+        session.send("/app/notify-received", "{\"name\":\"Client\"}");
 
         log.info("New session: {}", session.getSessionId());
     }
